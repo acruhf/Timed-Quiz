@@ -1,25 +1,114 @@
-body{
-	font-size: 20px;
-	font-family: sans-serif;
-	color: #333;
-}
-.question{
-	font-weight: 600;
-}
-.answers {
-    margin-bottom: 20px;
-}
-#submit{
-	font-family: sans-serif;
-	font-size: 20px;
-	background-color: orchid;
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
-}
-#submit:hover{
-	background-color: #3a8;
-}
+
+	body {
+	background-image: linear-gradient(#ddae7e, #F2C57C);
+	font-family: Arvo;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	}
+	/* Styling for the Code Quiz Intro Jumbotron */
+	#intro {
+	background-color: #DDAE7E;
+	text-align: center;
+	color: #ad4b49;
+	border-style: inset;
+	border-width: 2px;
+	border-color: #f2c57c;
+	}
+	a {
+	color: #ad4b49;
+	}
+	.justify-content-end {
+		color: #ad4b49;
+	}
+	/* Styling for the h1 element in the Code Quiz Intro Jumbotron */
+	.display-4 {
+		font-size: 3rem;
+		color: #ad4b49
+	}
+	
+	/* Styling for the Start button in the Code Quiz Intro Jumbotron */
+	#start {
+		padding: 10px 50px;
+		background-color: #7FB685
+	}
+	
+	/* Styling for all buttons with the .btn class */
+	.btn, .btn:focus, .btn:hover, .btn:active {
+		color: #ad4b49;
+		background-color: #7FB685;
+		border-color: #426A5A;
+		outline: none;
+		box-shadow: none;
+	}
+	
+	/* Styling to remove the border from all cards */
+	.card {
+		border-style: inset;
+		border-width: 2px;
+		border-color: #f2c57c;
+		background-color: #DDAE7E;
+		color: #ad4b49;
+	}
+	
+	/* Styling to hide the Questions Content Card by default */
+	#questions {
+		display: none;
+	}
+	
+	
+	/* Styling to align all of the buttons to the left in the div for the buttons used to answer each question */
+	.question-btn-container {
+		text-align: left;
+		background-color: #DDAE7E;
+	}
+	
+	/* Styling for the buttons used to answer each question */
+	.question-btn {
+		margin-top: 2.5px;
+		margin-bottom: 2.5px;
+	}
+	
+	/* Styling for the button to submit the player's initials */
+	.submit-btn {
+		padding-top: .17rem;
+		padding-bottom: .17rem;
+		margin-top: -4px;
+		margin-left: .21rem;
+	}
+	
+	/* Styling for the div where the player is notified if the answer is correct or wrong */
+	.response {
+		display: none;
+	}
+	
+	/* Styling for the card containing the Code Quiz player's score result */
+	#result{
+		display:none;
+		background-color: #DDAE7E;
+		border-style: inset;
+		border-width: 2px;
+		border-color: #f2c57c;
+	}
+	
+	/* Styling for the card containing the highscores content */
+	#scores {
+		display: none;
+		background-color: #DDAE7E;
+		border-style: inset;
+		border-width: 2px;
+		border-color: #f2c57c;
+	}
+	
+	/* Styling for the leaderboard ordered list which shows all of the players' highscores */
+	#leaderBoard{
+		margin-bottom: 10px;
+		background-color: #DDAE7E;
+	}
+	
+	/* Styling for each score entry in the leaderboard ordered list */
+	.score{
+		list-style-position: inside;
+		background-color: #DDAE7E;
+		margin-bottom: 2px;
+	}
