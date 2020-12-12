@@ -22,10 +22,11 @@ var backBtn = document.getElementById("back");
 var clearBtn = document.getElementById("clear");
 var navbar = document.querySelector(".navbar");
 var hr = document.getElementById("hr");
+var timeFont = document.getElementById("time");
 var i = 0;
 var guess;
 var correct = 0;
-var secondsLeft = 75;
+var secondsLeft = 60;
 var timerInterval;
 var highscores = [];
 var userInitials;
@@ -82,7 +83,7 @@ var questionSet = [
 
 
 
-// Function to get each question and fill in the content on the Question Content Card
+// Retrieve questions and fill in the Question Content Card
 function getQuestion (){
   if (i === questionSet.length){
       clearInterval(timerInterval);
@@ -96,7 +97,7 @@ function getQuestion (){
   btn4.textContent = questionSet[i].button4;
 }
 
-// Function to check the player's guess (i.e. which button was clicked) against the answer for the question
+// Function to check the player's guess against the answer for the question
 function checkAnswer(guess){
   if (guess === questionSet[i].answer){
       correct++;
@@ -108,7 +109,7 @@ function checkAnswer(guess){
   else{
       i++;
       response.textContent = "Wrong!"
-      secondsLeft = secondsLeft - 10;
+      secondsLeft = secondsLeft - 15;
       console.log("Seconds Left: "+secondsLeft);
       showResult();
       getQuestion();
@@ -207,6 +208,7 @@ start.addEventListener("click", function (event){
   getQuestion();
   intro.style.display = "none";
   questions.style.display = "block";
+  timeFont.style.display = "block";
   timeDisplay.textContent = secondsLeft;
   startTimer(secondsLeft);
 })

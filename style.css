@@ -2,6 +2,7 @@
 	body {
 	background-image: linear-gradient(#ddae7e, #F2C57C);
 	font-family: Arvo;
+	color: #ad4b49;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -10,16 +11,19 @@
 	#intro {
 	background-color: #DDAE7E;
 	text-align: center;
-	color: #ad4b49;
 	border-style: inset;
 	border-width: 2px;
 	border-color: #f2c57c;
 	}
+	/*Navbar Styling*/
 	a {
 	color: #ad4b49;
 	}
 	.justify-content-end {
 		color: #ad4b49;
+	}
+	#time {
+		display: none;
 	}
 	/* Styling for the h1 element in the Code Quiz Intro Jumbotron */
 	.display-4 {
@@ -42,7 +46,7 @@
 		box-shadow: none;
 	}
 	
-	/* Styling to remove the border from all cards */
+	/* card */
 	.card {
 		border-style: inset;
 		border-width: 2px;
@@ -51,7 +55,7 @@
 		color: #ad4b49;
 	}
 	
-	/* Styling to hide the Questions Content Card by default */
+	/*  hide Questions Content Card */
 	#questions {
 		display: none;
 	}
@@ -60,7 +64,6 @@
 	/* Styling to align all of the buttons to the left in the div for the buttons used to answer each question */
 	.question-btn-container {
 		text-align: left;
-		background-color: #DDAE7E;
 	}
 	
 	/* Styling for the buttons used to answer each question */
@@ -103,12 +106,10 @@
 	/* Styling for the leaderboard ordered list which shows all of the players' highscores */
 	#leaderBoard{
 		margin-bottom: 10px;
-		background-color: #DDAE7E;
 	}
 	
 	/* Styling for each score entry in the leaderboard ordered list */
 	.score{
 		list-style-position: inside;
-		background-color: #DDAE7E;
 		margin-bottom: 2px;
 	}
