@@ -1,6 +1,6 @@
 
 	body {
-	background-image: linear-gradient(#ddae7e, #F2C57C);
+	background-image: linear-gradient(#426a5a, #7fb685);
 	font-family: Arvo;
 	color: #ad4b49;
     background-repeat: no-repeat;
@@ -17,27 +17,30 @@
 	}
 	/*Navbar Styling*/
 	a {
-	color: #ad4b49;
+	font-size: 2rem;
+	color: whitesmoke;
 	}
 	.justify-content-end {
-		color: #ad4b49;
+		color:whitesmoke;
+	font-size: 3rem;
+	font-weight: bolder;
 	}
 	#time {
 		display: none;
 	}
-	/* Styling for the h1 element in the Code Quiz Intro Jumbotron */
+	/* Jumbotron h1 */
 	.display-4 {
-		font-size: 3rem;
+		font-size: 2rem;
 		color: #ad4b49
 	}
 	
-	/* Styling for the Start button in the Code Quiz Intro Jumbotron */
+	/* Jumbotron Start button */
 	#start {
 		padding: 10px 50px;
 		background-color: #7FB685
 	}
 	
-	/* Styling for all buttons with the .btn class */
+	/* quiz answer buttons */
 	.btn, .btn:focus, .btn:hover, .btn:active {
 		color: #ad4b49;
 		background-color: #7FB685;
@@ -46,7 +49,7 @@
 		box-shadow: none;
 	}
 	
-	/* card */
+	/* quiz card */
 	.card {
 		border-style: inset;
 		border-width: 2px;
@@ -55,24 +58,24 @@
 		color: #ad4b49;
 	}
 	
-	/*  hide Questions Content Card */
+	/*  hide Card */
 	#questions {
 		display: none;
 	}
 	
 	
-	/* Styling to align all of the buttons to the left in the div for the buttons used to answer each question */
+	/* Align answers left in card */
 	.question-btn-container {
 		text-align: left;
 	}
 	
-	/* Styling for the buttons used to answer each question */
+	/* question button margins */
 	.question-btn {
 		margin-top: 2.5px;
 		margin-bottom: 2.5px;
 	}
 	
-	/* Styling for the button to submit the player's initials */
+	/* initials submit margins */
 	.submit-btn {
 		padding-top: .17rem;
 		padding-bottom: .17rem;
@@ -80,12 +83,12 @@
 		margin-left: .21rem;
 	}
 	
-	/* Styling for the div where the player is notified if the answer is correct or wrong */
+	/* wrong/correct response */
 	.response {
 		display: none;
 	}
 	
-	/* Styling for the card containing the Code Quiz player's score result */
+	/* quiz end final score card */
 	#result{
 		display:none;
 		background-color: #DDAE7E;
@@ -94,7 +97,7 @@
 		border-color: #f2c57c;
 	}
 	
-	/* Styling for the card containing the highscores content */
+	/* leaderboard card */
 	#scores {
 		display: none;
 		background-color: #DDAE7E;
@@ -103,12 +106,12 @@
 		border-color: #f2c57c;
 	}
 	
-	/* Styling for the leaderboard ordered list which shows all of the players' highscores */
+	/* leaderboard margins */
 	#leaderBoard{
 		margin-bottom: 10px;
 	}
 	
-	/* Styling for each score entry in the leaderboard ordered list */
+	/* leaderboard text */
 	.score{
 		list-style-position: inside;
 		margin-bottom: 2px;

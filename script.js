@@ -30,7 +30,8 @@ var secondsLeft = 60;
 var timerInterval;
 var highscores = [];
 var userInitials;
-var userScore;
+var userScore
+
 //Question Set
 var questionSet = [
     {
@@ -70,12 +71,12 @@ var questionSet = [
         "answer": "1"
       },
     {
-      "question": "Which Electric Guitar Pickup was invented by Seth Lover in 1955?",
+      "question": "Which Electric Guitar is shaped like a Triangle?",
 
-        "button1": "P-90",
-        "button2": "P.A.F. Humbucker",
-        "button3": "Filtertron",
-        "button4": "Wide-Range Humbucker",
+        "button1": "Stratocaster",
+        "button2": "Flying V",
+        "button3": "ES-335",
+        "button4": "Jazzmaster",
         "answer": "2"
     } 
     
@@ -83,11 +84,11 @@ var questionSet = [
 
 
 
-// Retrieve questions and fill in the Question Content Card
+// Function to retrieve questions and fill in the Quiz Card
 function getQuestion (){
   if (i === questionSet.length){
-      clearInterval(timerInterval);
       showFinalResults();
+      clearInterval(timerInterval);
       return (secondsLeft);
   }
   questionTxt.textContent = questionSet[i].question;
@@ -97,7 +98,7 @@ function getQuestion (){
   btn4.textContent = questionSet[i].button4;
 }
 
-// Function to check the player's guess against the answer for the question
+// Function to check the player's guess against the answer for each question
 function checkAnswer(guess){
   if (guess === questionSet[i].answer){
       correct++;
@@ -108,7 +109,7 @@ function checkAnswer(guess){
   }
   else{
       i++;
-      response.textContent = "Wrong!"
+      response.textContent = "Wrong!";
       secondsLeft = secondsLeft - 15;
       console.log("Seconds Left: "+secondsLeft);
       showResult();
@@ -129,8 +130,9 @@ function showResult(){
   }, 1000);
 }
 
-//Function to show the player's final quiz score in the card for the Results Content
+//Function to show the player's final quiz score 
 function showFinalResults(){
+  console.log("show final result hit with seconds left: ",secondsLeft);
   clearInterval(timerInterval);
   userCorrect.textContent = correct;
   if (correct === 0){
@@ -144,7 +146,7 @@ function showFinalResults(){
   result.style.display = "block";
 }
 
-//Function to get the highscores stored in the local storage
+//Function to get the highscores stored in local storage
 function getScores(){
   highscores = JSON.parse(localStorage.getItem("highscores"));
   console.log(highscores);
@@ -177,7 +179,7 @@ function showScores(){
 }
 
 //Function to start the quiz timer
-function startTimer (secondsLeft){
+function startTimer(){
   timerInterval = setInterval(timer, 1000);
 }
 
